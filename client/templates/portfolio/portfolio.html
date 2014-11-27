@@ -1,0 +1,32 @@
+<template name="portfolio">
+	<section id="portfolio">
+		<div class="container">
+
+			{{> yield region="project"}}
+			
+			<div class="row">
+
+				{{#each portfolio}}
+
+					<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+						
+						{{> portfolioItem}}
+
+					</div>
+
+				{{/each}}
+					
+			</div>
+		</div>	
+	</section>
+</template>
+
+<template name="portfolioItem">
+	<div class="portfolio-item">
+		<a href="#" class="portfolio-item-link" style="background-image: url({{image}})">
+			<span class="overlay"></span>
+			<h3 class="portfolio-item-title">{{title}}</h3>
+			<span class="portfolio-item-subtitle"><p>{{subtitle}}</p></span>
+		</a>
+	</div>
+</template>

@@ -1,0 +1,82 @@
+footer {
+  width: 100%;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  background-color: #333333;
+
+  div.container {
+
+    div {
+
+      display: block;
+
+      &.copyright {
+
+        @media only screen and (min-width : $screen-sm) {
+          float: left;
+        }
+
+        @media only screen and (max-width : $screen-sm) {
+          text-align: center;
+        }
+
+        p {
+          margin-top: 5px;
+          color: #666666;
+
+          span {
+            color: $pink;
+          }
+        }
+      }
+
+      &.social {
+
+        @media only screen and (min-width : $screen-sm) {
+          float: right;
+        }
+
+        @media only screen and (max-width : $screen-sm) {
+          text-align: center;
+        }
+
+        li {
+          padding: 10px 12px;
+
+          a.icon {
+            position: absolute;
+            margin-top: -5px;
+            margin-left: -10px;
+            width: 20px;
+            height: 20px;
+
+            @include css3-prefix(transition, all 0.3s ease-out);
+
+            &.icon-github {
+              background: url("../images/icons/github_pink.png");
+              background-size: cover;
+
+              &:hover, .hover {
+                background: url("../images/icons/github_white.png");
+                background-size: cover;
+              }
+            }
+
+            &.icon-linkedin {
+              background: url("../images/icons/linkedin_pink.png");
+              background-size: cover;
+
+              &:hover, .hover {
+                background: url("../images/icons/linkedin_white.png");
+                background-size: cover;
+              }
+            
+            }
+          }
+        }
+      }
+    }
+  }
+}

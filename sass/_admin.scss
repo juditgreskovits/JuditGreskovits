@@ -1,0 +1,81 @@
+.admin {
+
+	padding-top: 40px;
+	padding-bottom: 0;
+
+	.row {
+
+		img {
+			border: 1px solid $grey;
+			margin-bottom: 10px;
+		}
+	}
+
+	form {
+
+		margin-bottom: 40px;
+
+		textarea {
+			height: 110px;
+
+			&#tech {
+				height: 70px;
+			}
+		}
+
+		button {
+			float: right;
+			margin-left: 10px;
+		}
+	}
+}
+
+.admin-header-background{
+	height: 99px;
+}
+
+#admin-about {
+
+	padding-bottom: 30px;
+
+	form {
+		textarea {
+			height: 180px;
+		}
+	}
+	button {
+		margin-top: 191px;
+		border: 1px solid #000000;
+	}
+	
+}
+
+.admin-access-denied {
+	height: 100vh;
+	margin-top: -99px;
+	margin-bottom: -55px;
+
+	text-align: center;
+
+	h2 {
+		padding-top: 100px;
+	}
+}
+
+.not-found {
+	height: 100vh;
+	margin-top: -20px;
+	margin-bottom: -90px;
+	@media only screen and (min-width : $screen-sm) {
+    	margin-bottom: -55px;
+  	}
+
+	text-align: center;
+
+	h2 {
+		padding-top: 126px;
+		@media only screen and (min-width : $screen-sm) {
+	    	padding-top: 186px;
+	  	}
+	}
+}

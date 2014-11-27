@@ -1,0 +1,88 @@
+<template name="adminPortfolio">
+	<section id="admin-portfolio" class="admin portfolio-background">
+		<div class="container">
+
+			{{> adminAddPortfolioItem}}
+
+			{{#each portfolio}}
+			
+				{{> adminPortfolioItem}}
+
+			{{/each}}
+		</div>	
+	</section>
+</template>
+
+<template name="adminAddPortfolioItem">
+	<form class="admin-project">
+	
+		{{> adminPortfolioItemInput}}
+		
+		<div class="row">	
+			<div class="col-md-12 col-lg-12">	
+				<button id="form-add" type="submit" name="submit" class="form-button">Add <span>&#187;</span></button>
+			</div>					
+		</div>
+	</form>
+</template>
+
+<template name="adminPortfolioItem">
+	<form class="admin-project">
+
+		{{> adminPortfolioItemInput}}
+		
+		<div class="row">	
+			<div class="col-md-12 col-lg-12">	
+				<button id="form-delete" type="delete" name="delete" class="form-button">Delete <span>&#187;</span></button>
+				<button id="form-update" type="submit" name="submit" class="form-button">Update <span>&#187;</span></button>
+			</div>					
+		</div>
+	</form>
+</template>
+
+<template name="adminPortfolioItemInput">
+	<div class="row">
+		<div class="col-md-4 col-lg-4">
+			<div class="portfolio-item-image" style="background-image: url({{image}})"></div>
+			<input name="admin-portfolio-item-image" id="image" type="text" value="{{image}}" placeholder="Image URL" class="form-input {{error 'admin-portfolio-item-image'}}">
+		</div>	
+		<div class="col-md-4 col-lg-4">
+			<input name="admin-portfolio-item-title" id="admin-portfolio-item-title" type="text" value="{{title}}" placeholder="Project Title" class="form-input {{error 'admin-portfolio-item-title'}}">
+
+			<input name="admin-portfolio-item-subtitle" id="admin-portfolio-item-subtitle" type="text" value="{{subtitle}}" placeholder="Project Subtitle" class="form-input {{error 'admin-portfolio-item-subtitle'}}">
+
+			<input name="admin-portfolio-item-category" id="admin-portfolio-item-category" type="text" value="{{category}}" placeholder="Project Category" class="form-input {{error 'admin-portfolio-item-category'}}">
+
+			<input name="admin-portfolio-item-client" id="admin-portfolio-item-client" type="text" value="{{client}}" placeholder="Client" class="form-input {{error 'admin-portfolio-item-client'}}">
+
+			<input name="admin-portfolio-item-company" id="admin-portfolio-item-company" type="text" value="{{company}}" placeholder="Company" class="form-input {{error 'admin-portfolio-item-company'}}">
+
+			<input name="admin-portfolio-item-companyUrl" id="admin-portfolio-item-companyUrl" type="text" value="{{companyUrl}}" placeholder="Company Link" class="form-input {{error 'admin-portfolio-item-companyUrl'}}">
+
+		</div>
+		<div class="col-md-4 col-lg-4">
+			<input name="admin-portfolio-item-role" id="admin-portfolio-item-role" type="text" value="{{role}}" placeholder="Role in the Project" class="form-input {{error 'admin-portfolio-item-role'}}">
+
+			<textarea name="admin-portfolio-item-tech" id="admin-portfolio-item-tech" value="{{tech}}" placeholder="Tech Used in the Project" class="form-input {{error 'admin-portfolio-item-tech'}}"></textarea>
+
+			<input name="admin-portfolio-item-infoUrl" id="admin-portfolio-item-infoUrl" type="text" value="{{infoUrl}}" placeholder="Link to More Info" class="form-input {{error 'admin-portfolio-item-infoUrl'}}">
+
+			<input name="admin-portfolio-item-infoUrlLabel" id="admin-portfolio-item-infoUrlLabel" type="text" value="{{infoUrlLabel}}" placeholder="Label for More Info Link" class="form-input {{error 'admin-portfolio-item-infoUrlLabel'}}">
+
+			<input name="admin-portfolio-item-url" id="admin-portfolio-item-url" type="text" value="{{url}}" placeholder="Link to Project" class="form-input {{error 'admin-portfolio-item-url'}}">
+
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4 col-lg-4">
+			<input name="admin-portfolio-item-start" id="admin-portfolio-item-start" type="text" value="{{start}}" placeholder="Start Date of the Project" class="form-input {{error 'admin-portfolio-item-start'}}">
+			<input name="admin-portfolio-item-end" id="admin-portfolio-item-end" type="text" value="{{end}}" placeholder="End Date of the Project" class="form-input {{error 'admin-portfolio-item-end'}}">
+		</div>	
+		<div class="col-md-4 col-lg-4">
+			<textarea name="admin-portfolio-item-challenge" id="admin-portfolio-item-challenge" value="{{challenge}}" placeholder="The Challenge" class="form-input {{error 'admin-portfolio-item-challenge'}}"></textarea>
+		</div>
+		<div class="col-md-4 col-lg-4">	
+			<textarea name="admin-portfolio-item-solution" id="admin-portfolio-item-solution" value="{{solution}}" placeholder="The Solution" class="form-input {{error 'admin-portfolio-item-solution'}}"></textarea>
+		</div>
+	</div>	
+</template>

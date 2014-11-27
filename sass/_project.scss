@@ -1,0 +1,113 @@
+#project {
+
+	position: relative;
+
+	margin-bottom: 35px;
+	padding-left: 18px;
+	padding-right: 18px;
+	padding-bottom: 10px;
+
+	background-color: #ffffff;
+	color: #333333;
+
+	border: 1px solid #efefef;
+	/*border: 1px solid #fefefe;*/
+
+	p {
+      text-align: justify;
+    }
+
+	.project-header {
+		color: $pink;
+
+		@media only screen and (max-width : $screen-sm) {
+	      text-align: center;
+	    }
+
+	    @media only screen and (min-width : $screen-sm) {
+	      color: #333333;
+	    }
+	}
+
+	.project-title {
+		color: #333333;
+	}
+
+	.project-image {
+		margin-bottom: 10px;
+		max-width: 400px;
+		height: 250px;
+	}
+
+	.project-subtitle {
+		color: #666666;
+		font-size: 14px;
+		font-weight: light;
+		/*text-transform: uppercase;*/
+	}
+
+	.close-button{
+		position: absolute;
+		top: 0;
+		right:0;
+		position: absolute;
+        display: inline;
+        margin-top: 8px;
+        padding: 6px 18px 6px 9px;
+
+        background-color: #333333;
+
+        color: #ffffff;
+        font-size: 11px;
+        font-weight: bold;
+        text-transform: uppercase;
+
+        @include css3-prefix(transition, background-color 0.3s ease-out);
+
+        &:hover, &:focus, .hover {
+        	color: #ffffff;
+        	background-color: $pink;
+        	text-decoration: none;
+        }
+	}
+
+	.description {
+
+		@media only screen and (min-width: $screen-sm-min) and (max-width: $screen-md-min) {
+			padding-right: 60px;
+		}
+	}
+
+	.facts {
+
+		@media only screen and (min-width: $screen-md-min) {
+			padding-right: 60px;
+		}
+
+		ul {
+			padding-left: 19px;
+			list-style: none;
+
+			li {
+				margin-bottom: 5px;
+				color: $pink;
+				list-style-type: disc;
+				span {
+					color: #333333;
+
+					a {
+						color: #000000;
+						font-weight: bold;
+
+						@include css3-prefix(transition, color 0.3s ease-out);
+
+						&:hover, &:focus, .hover {
+							color: $pink;
+							text-decoration: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}

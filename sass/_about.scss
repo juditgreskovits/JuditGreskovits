@@ -1,0 +1,33 @@
+#about {
+
+  padding-top: 40px;
+  padding-bottom: 35px;
+
+  @extend .about-background;
+
+  div { 
+    
+    @include css3-prefix(column-count, 2);
+    @include css3-prefix(column-width, 300px);
+    @include css3-prefix(column-gap, 2em);
+
+    h2 {
+      @include css3-prefix(column-span, all);
+    }
+
+    p {
+      color: #777777;
+      text-align: justify;
+
+      .highlight {
+        color: #aaaaaa;
+      }
+
+       .skill {
+        color: #999999;
+      }
+    }
+  }
+
+}
+

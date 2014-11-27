@@ -1,0 +1,43 @@
+<template name="project">
+	<section id="project">
+		<div class="row">
+
+			<div class="col-sm-6 col-md-4">
+				<h3 class="project-title project-header">{{title}}</h3>
+				<div class="portfolio-item-image project-image" style="background-image: url({{image}})"></div>
+				
+			</div>
+
+			<div class="col-sm-6 col-md-4 description">
+				<h3 class="project-header">The project</h3>
+				<p>{{challenge}}</p>
+				<h3 class="project-header">The solution</h3>
+				<p>{{solution}}</p>
+			</div>
+
+			<div class="col-sm-12 col-md-4 facts">
+				<h3 class="project-header">The facts</h3>
+				<ul>
+					<li><span>{{subtitle}} for <b>{{client}}</b> developed at <a href="{{companyUrl}}" target="_blank">{{company}}</a></span></li>
+					<li><span>Used {{tech}}</span></li>
+
+					{{#if infoUrl}}
+
+					<li><span>View <a href="{{infoUrl}}" target="_blank">{{infoUrlLabel}}</a> for more on the project</span></li>
+					
+					{{/if}}		
+
+					{{#if url}}
+
+						<li><span>Visit <a href="{{url}}" target="_blank">{{title}}</a></span></li>
+
+					{{/if}}	
+
+				</ul>
+			</div>
+
+		</div>
+		<a href="#" id="close-button" class="close-button">x</a>
+	</section>
+
+</template>

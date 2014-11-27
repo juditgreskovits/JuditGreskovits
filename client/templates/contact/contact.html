@@ -1,0 +1,34 @@
+<template name="contact">
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-header">Contact</h2>
+      <form id="contact-form" class="contact-form">
+        <div class="row">
+          <div class="col-sm-4 col-md-4">
+            <div>
+              <input type="text" name="name" id="form-name" value="" class="name form-input {{error 'name'}}" placeholder="Your name (required)">
+            </div>
+
+            <div>
+              <input type="email" name="email" id="form-email" value="" class="email form-input {{error 'email'}}" placeholder="Your email (required)">
+            </div>
+
+            <div>
+              <input type="text" name="phone" id="form-phone" value="" class="phone form-input {{error 'phone'}}" placeholder="Your phone number">
+            </div>
+          </div>    
+          <div class="col-sm-5 col-md-5">
+            <div>
+              <textarea name="message" id="form-message" rows="5" class="form-input contact-textarea {{error 'message'}}" placeholder="Say hello!"></textarea>
+            </div>
+          </div>
+          <div class="col-sm-3 col-md-3">
+            <p id="contact-success" class="form-feedback contact-feedback">Thank you for saying hello!</p>
+            <p id="contact-error" class="form-feedback contact-feedback">Oops...! Your message could not be sent, please try again later!</p>
+            <button id="form-submit" type="submit" name="submit" class="form-button contact-button">Send <span>&#187;</span></button>
+          </div>  
+        </div>
+      </form>
+    </div>  
+  </section>
+</template>

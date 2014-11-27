@@ -1,0 +1,57 @@
+input, textarea {
+  -webkit-appearance: none;
+  @include css3-prefix(border-radius, 0);
+}
+
+.form-input {
+  padding: 4px 6px;
+  margin-bottom: 10px;
+  width: 100%;
+  font-size: 14px;
+  border:1px solid $grey;
+  &:focus {
+    outline: $pink solid 1px;
+  }
+}
+
+.form-error {
+  color: $pink;
+  @include css3-prefix-content("placeholder") {
+    color: $pink;
+  }
+}
+
+.form-button {
+    
+  padding: 4px 16px 5px 16px;
+
+  background-color: $pink;
+  border:1px solid $grey;
+  outline: 0;
+  
+  color:#333333;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  span {
+    font-size: 18px;
+    line-height: 16px;
+    color: #ffffff;
+  }
+
+  &:hover, &:focus, .hover {
+    background-color: #ffffff;
+
+    span {
+      color: $pink;
+    }
+  }
+
+  cursor: pointer;
+}
+
+.form-feedback {
+  color: $pink;
+}

@@ -1,0 +1,48 @@
+$pink: #FF69B4;
+$grey: #e7e7e7;
+
+$screen-xs-sm: 460px;
+$screen-sm: 768px;
+$screen-md: 960px;
+
+.portfolio-background {
+	background: $grey url("../images/swirl_pattern_white.png");
+}
+
+.portfolio-item-image {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 190px;
+	margin-bottom: 10px;
+
+	overflow: hidden;
+
+	background-color: #ffffff;
+	background-position: center; 
+	background-repeat: no-repeat;
+	background-size: 400px auto;
+
+	border: 1px solid $grey;
+}
+
+.about-background {
+	background-color: #222222;
+}
+
+.contact-background {
+	background: #111111 url("../images/swirl_pattern_black.png");
+}
+
+.section-header {
+	color: $pink;
+	display: none;
+	margin-top: 0;
+	padding: 0;
+	margin-bottom: 20px;
+	text-align: center;
+
+	@media only screen and (max-width : $screen-sm) {
+      display: block;
+    }
+}

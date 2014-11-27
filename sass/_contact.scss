@@ -1,0 +1,57 @@
+#contact {
+
+  padding-top: 40px;
+  padding-bottom: 30px;
+
+  @extend .contact-background;
+
+  .col-md-3 {
+    height: 108px;
+  }
+
+  .form-input {
+    border:1px solid #000000;
+    outline: none;
+
+    @include css3-prefix(box-shadow, inset 0 0 8px rgba(0, 0, 0, 0.4));
+    @include css3-prefix(transition, border-color 0.3s ease-out);
+
+    &:focus {
+      border-color: $pink;
+    }
+  }
+
+  .contact-textarea {
+    width: 100%;
+    margin-bottom: 5px;
+    resize: none;
+  }
+
+  .contact-button {
+
+    position: absolute;
+
+    border: 1px solid #000000;
+
+    @media only screen and (min-width : $screen-sm) {
+      bottom: 0;
+      left: 15px;
+    }
+
+    @media only screen and (max-width : $screen-sm) {
+      right: 15px;
+    }
+
+    @include css3-prefix(transition, background-color 0.3s ease-out);
+  }
+
+  .contact-feedback {
+    display: none;
+    background-color: #111111;
+    padding: 4px 16px 4px 16px;
+
+    &.active {
+      display: inline-block;
+    }
+  }
+}

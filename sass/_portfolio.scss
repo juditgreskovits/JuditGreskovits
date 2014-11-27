@@ -1,0 +1,105 @@
+#portfolio {
+
+  padding-top: 100px;
+  @media only screen and (min-width : $screen-sm) {
+    padding-top: 160px;
+  }
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @extend .portfolio-background;
+  border-bottom: 1px solid $grey;
+
+  @media only screen and (min-width: $screen-xs-sm) and (max-width: $screen-sm-min) {
+    .col-xs-12{
+      width: 50%;
+    }
+  }
+
+  .portfolio-item {
+    
+    margin-bottom: 30px;
+
+    .portfolio-item-link {
+
+      @extend .portfolio-item-image;
+
+      height: 120px;
+
+      @media only screen and (min-width: $screen-sm-min) {
+        height: 180px;
+      }
+
+      .portfolio-item-title {
+        position: absolute;
+        display: inline;
+        margin-top: 8px;
+        padding: 6px 9px 6px 18px;
+
+        background-color: #333333;
+
+        color: #ffffff;
+        font-size: 11px;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      .portfolio-item-subtitle {
+        position: relative;
+        display: none;
+        margin-top: 40px;
+        padding: 6px 18px 6px 18px;
+
+        color: #aaaaaa;
+        font-size: 14px;
+      }
+
+      .overlay {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        &:after {
+          content:'\A';
+          position:absolute;
+          width:100%; height:100%;
+          top:0; left:0;
+          background:rgba(34, 34, 34, 0.90);
+          opacity:0;
+
+          @include css3-prefix(transition, opacity 0.5s ease-out);
+        }
+      }
+
+      /*.overlay {
+        display: none;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: #333333;
+        opacity: 0;
+      }*/
+
+      &:hover, &:focus, .hover {
+
+        .overlay:after {
+          opacity: 1;
+        }
+
+        .portfolio-item-title {
+          background-color: $pink;
+        }
+
+        /*.overlay {
+          display: block;
+          opacity: 0.96;
+        }*/
+
+        .portfolio-item-subtitle {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}

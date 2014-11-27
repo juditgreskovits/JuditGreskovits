@@ -1,0 +1,15 @@
+@mixin css3-prefix($property, $value){
+    -webkit-#{$property}: #{$value};
+    -moz-#{$property}: #{$value};
+    -ms-#{$property}: #{$value};
+    -o-#{$property}: #{$value};
+    #{$property}: #{$value};
+}
+
+@mixin css3-prefix-content($property) {
+    &.#{$property} { @content; }
+    &:-moz-#{$property} { @content; }
+    &::-moz-#{$property} { @content; }
+    &:-ms-input-#{$property} { @content; }
+    &::-webkit-input-#{$property} { @content; }
+}

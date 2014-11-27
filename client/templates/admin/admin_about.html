@@ -1,0 +1,23 @@
+<template name="adminAbout">
+	<section id="admin-about" class="admin about-background">
+		<div class="container">
+
+			{{#with about}}
+
+				<form>
+					<div class="row">
+						<div class="col-md-10 col-lg-10">
+							<input name="admin-about-title" id="admin-about-title" type="text" value="{{title}}" placeholder="About Title" class="form-input {{error 'admin-about-title'}}">
+							<textarea name="admin-about-description" id="admin-about-description" value="{{description}}" placeholder="About Description" class="form-input {{error 'admin-about-description'}}"></textarea>
+						</div>
+						<div class="col-md-2 col-lg-2">	
+							<button id="form-submit" type="submit" name="submit" class="form-button">Update <span>&#187;</span></button>
+						</div>
+					</div>
+				</form>
+
+			{{/with}}
+			
+		</div>
+	</section>
+</template>
